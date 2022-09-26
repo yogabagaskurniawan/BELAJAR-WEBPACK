@@ -1,0 +1,10 @@
+$body: salmon;
+
+// untuk mengubah variabel di bootstrap
+$primary: grey;
+$danger: green;
+@import 'bootstrap/scss/bootstrap';
+
+body {
+  background-color: $body;
+}
