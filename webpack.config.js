@@ -1,14 +1,15 @@
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    mode: 'development',    // ada mode " production" untuk melihat file di bundle.js seperti codingan kita sendiri 
     entry: './src/index.js',
-    output: {
-        path: path.resolve(__dirname, 'output'),
-        filename: 'bundle.js',
-    },
-    watch: true,    // unk kalau ada modifikasi pada file" tertentu itu bisa langsung jalan tidak harus ketikan "npm run build" di terminal // cara matikan ctrl+c
-    devtool: false,      // untuk menghilangkan "eval" pada bundle.js
+    // untuk pemanggilan html plugin
+    plugins: [new HtmlWebpackPlugin({
+        template: './src/templete.html',
+    })],
+    // untuk menghilangkan "eval" pada bundle.js
+    devtool: false,
     module: {
         rules: [
             // {
