@@ -14,4 +14,4 @@ const jokesService = new JokesService();
 
 run(alertService, calculatorService, jokesService);
 
-alert(' selamat datang.. Semoga harimu menyenangkan')
+// alert(' selamat datang.. Semoga harimu menyenangkan')
